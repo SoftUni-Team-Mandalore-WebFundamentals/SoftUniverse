@@ -1,0 +1,90 @@
+.wrapper{
+  max-width: 1280px;
+  margin: 0 auto;
+}
+#header{
+  position: fixed;
+  top:0px;
+  width: 100%;
+  height: 79px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  transition: height 0.5s linear 0s, padding 0.5s linear 0s;
+  overflow: hidden;
+}
+#header-main{
+  display: flex;
+  flex-wrap: wrap;
+   -webkit-flex-direction:row;
+  justify-content: space-between;
+  padding-bottom: 5px;
+  border-bottom: 1px solid silver;
+}
+.logo{
+  width: 30%;
+}
+#logo{
+  width: 420px;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+nav{
+  width: 60%;
+  text-align: right;
+}
+nav > ol{
+  margin-top: 30px;
+}
+nav > ol > li{
+  display: inline;
+  margin: 20px;
+}
+nav > ol > li > a{
+  font-size: 1.6em;
+  color: #c8d1cd;
+  text-transform: uppercase;
+}
+nav > ol > li > a:hover{
+  text-decoration: none;
+  color: #d6c035;
+}
+.banner{
+  width: 100%;
+  height: 950px;
+  overflow: hidden;
+}
+.banner > .background-banner{
+  position: relative;
+  background-image: url('../img/sky-background.jpg');
+  width: 120%;
+  height: 950px;
+  -webkit-animation: backdrop_roll linear 15s infinite;
+  -moz-animation: backdrop_roll linear 15s infinite;
+  -ms-animation: backdrop_roll linear 15s infinite;
+  animation: backdrop_roll linear 15s infinite;
+}
+.banner-content{
+  position: relative;
+  width: 90%;
+  height: 100%;
+  margin: 20px auto;
+  top:-800px;
+  color: white;
+  text-align: center;
+}
+@-moz-keyframes backdrop_roll{
+      from {right: 0px;}
+      to {right: 20%}
+    }
+@-webkit-keyframes backdrop_roll{
+      from {right: 0px;}
+      to {right: 20%}
+}
+@-ms-keyframes backdrop_roll{
+      from {right: 0px;}
+      to {right: 20%}
+}
+@keframes backdrop_roll{
+      from {right: 0px;}
+      to {right: 20%}
+}
