@@ -25,8 +25,7 @@ function runOnScroll(){
   var w = window.innerWidth;
   if (yPos>80) {
     header.style.paddingTop = "5px";
-    header.style.paddingBottom = "0px";
-    logo.style.width="320px";
+    header.style.paddingBottom = "5px";
     headermain.style.borderBottom = "0px solid silver";
     header.style.background = "#353d40";
     navi.style.marginTop = "20px";
@@ -38,9 +37,8 @@ function runOnScroll(){
     header.style.paddingTop = "20px";
     header.style.paddingBottom = "20px";
     header.style.background = "none";
-    logo.style.width="420px";
     headermain.style.borderBottom = "1px solid silver";
-    navi.style.marginTop = "30px";
+    navi.style.marginTop = "20px";
     if (isExpand == true ) {
       $( "#menu" ).slideToggle("fast");
       isExpand = false;
@@ -53,10 +51,12 @@ $(window).resize(function() {
   if (w>=1080) {
       document.getElementById("menu").style.display = "block";
       isExpand = false;
+      logo.style.width="320px";
   }
   if (w<=1080) {
     document.getElementById("menu").style.display = "none";
     isExpand = false;
+    logo.style.width="250px";
   }
 });
 window.addEventListener("scroll", runOnScroll);
