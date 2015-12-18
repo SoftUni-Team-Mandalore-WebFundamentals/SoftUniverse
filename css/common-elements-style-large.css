@@ -11,6 +11,7 @@
   padding-bottom: 20px;
   transition: height 0.5s linear 0s, padding 0.5s linear 0s;
   overflow: hidden;
+  z-index: 20;
 }
 #header-main{
   display: flex;
