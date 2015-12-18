@@ -8,7 +8,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="css/common-elements-style.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/landing-page.css" media="screen" title="no title" charset="utf-8">
-
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css" media="screen" title="no title" charset="utf-8">
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </head>
   <body>
 
@@ -26,16 +28,18 @@
         <div id="logo" class="logo">
           <a href="index.html"><img src="img/logo.png" alt="logo" /></a>
         </div>
-        <nav>
-          <ol>
+        <i id="nav-btn" class="fa fa-bars fa-3x"></i>
+        <nav id="nav" >
+          <ul id="menu">
             <li><a href="index.html">Начало</a></li>
             <li><a href="#">История</a></li>
             <li><a href="#">Анкета</a></li>
             <li><a href="#">За Нас</a></li>
-          </ol>
+          </ul>
         </nav>
       </div>
     </header>
+
     <main>
         <div id="story-container" class="wrapper">
        <h2 id="title" class="threeD">Преди много години, в една далечна галактика...</h2>
@@ -77,11 +81,9 @@
        </section>
      </div>
     </main>
+    
 
     <script src="js/spinning-background.js" charset="utf-8"></script>
     <script src="js/web-header.js" charset="utf-8"></script>
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-
   </body>
 </html>
