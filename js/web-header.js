@@ -4,7 +4,7 @@ var headermain = document.getElementById('header-main');
 var yPos;
 function runOnScroll(){
   yPos = window.pageYOffset;
-  if (yPos>150) {
+  if (yPos>80) {
     header.style.paddingTop = "5px";
     header.style.paddingBottom = "0px";
     logo.style.width="320px";
