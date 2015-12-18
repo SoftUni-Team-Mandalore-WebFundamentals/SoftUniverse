@@ -1,0 +1,16 @@
+=animation($name,$time,$effect,$delay,$repeat,$direction)
+  -webkit-animation: $name $time $effect $delay $repeat $direction
+  -moz-animation: $name $time $effect $delay $repeat $direction
+  -o-animation: $name $time $effect $delay $repeat $direction
+  animation: $name $time $effect $delay $repeat $direction
+
+=transition-single($selector, $time, $effect)
+  -webkit-transition: $selector $time $effect
+  -moz-transition: $selector $time $effect
+  -o-transition: $selector $time $effect
+  transition: $selector $time $effect
+=transition($var...)
+  -webkit-transition: $var
+  -moz-transition: $var
+  -o-transition: $var
+  transition: $var
