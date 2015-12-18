@@ -24,6 +24,7 @@
   text-shadow: 0 0px 1px black, 1px 1px 0 hsl(0, 0%, 90%), 2px 2px 0 hsl(0, 0%, 80%), 2px 3px 0 hsl(0, 0%, 70%), 3px 4px 0 hsl(0, 0%, 60%), 3px 5px 0 hsl(0, 0%, 50%), 0 10px 10px black
 
 #story-container
+  overflow: hidden
   padding-top: 57px
   text-align: center
   font-family: Calibri, sans-serif
@@ -107,13 +108,11 @@
         left: 290px
         bottom: 50px
         opacity: 1
-        +animation(float,1.5s,linear,0.0s,infinite,alternate)
 
       ~ .story-text.left
         right: 290px
         bottom: 50px
         opacity: 1
-        +animation(float,1.5s,linear,0.0s,infinite,alternate)
     img
       min-width: 250px
       position: relative
@@ -158,13 +157,12 @@
           padding: 10px
           box-shadow: 1px 1px 2px black
           bottom: 60px
-          +animation(float,1.5s,linear,0.0s,infinite,alternate)
         ~ .story-text.left
           right: -75px
         ~ .story-text.right
           left: -75px
 
-@media screen and (max-width: 400px)
+@media screen and (max-width: 460px)
   #story-wrapper
     .story-text
       width: 250px
