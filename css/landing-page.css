@@ -232,5 +232,99 @@ main h2.shown {
     right: -5px; }
   #story-wrapper .story-text.right.shown {
     left: 0px; } }
-
+.chose-side{
+  width: 100%;
+  background-color: #F7F7F7;
+  text-align: center;
+}
+.chose-side h2{
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+.chose-side-pickers{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: right;
+  width: 100%;
+  padding-bottom: 70px;
+}
+.light-side-picker{
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.dark-side-picker{
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-flow: row-reverse;
+}
+#dVader:hover ~ #vader-speach{
+  opacity: 1;
+visibility: visible;
+}
+.vader{
+  width: 50%;
+}
+#soft-wiz{
+  width: 50%;
+}
+#vader-speach{
+  width: 50%;
+  text-align: right;
+  font-size: 18px;
+  opacity: 0;
+  -moz-transition: opacity .25s linear, visibility .1s linear .3s;
+  -webkit-transition: opacity .25s linear, visibility .1s linear .3s;
+  -o-transition: opacity .25s linear, visibility .1s linear .3s;
+  transition: opacity .25s linear, visibility .1s linear .3s;
+  visibility: hidden;
+}
+#wizzard-speach{
+  width: 50%;
+  text-align: left;
+  font-size: 18px;
+  opacity: 0;
+  -moz-transition: opacity .25s linear, visibility .1s linear .3s;
+  -webkit-transition: opacity .25s linear, visibility .1s linear .3s;
+  -o-transition: opacity .25s linear, visibility .1s linear .3s;
+  transition: opacity .25s linear, visibility .1s linear .3s;
+  visibility: hidden;
+}
+#vader-speach img{
+  padding: 20px;
+}
+#vader-pic:hover{
+  opacity: 0.8;
+}
+#sw-wizz:hover{
+  opacity: 0.8;
+}
+#soft-wiz:hover ~ #wizzard-speach{
+  opacity: 1;
+visibility: visible;
+}
+#line-down{
+  padding: 10px;
+  padding-top: 120px;
+}
+@media screen and (max-width: 1000px){
+  .light-side-picker{
+    width: 100%;
+  }
+  .dark-side-picker{
+    width: 100%;
+  }
+  #wizzard-speach{
+    opacity: 1;
+  visibility: visible;
+  }
+  #vader-speach{
+    opacity: 1;
+  visibility: visible;
+  }
+}
 /*# sourceMappingURL=landing-page.css.map */
