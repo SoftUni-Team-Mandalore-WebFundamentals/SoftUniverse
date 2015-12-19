@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>History of Webfundamentals TeamWork - Team Mandalore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/normalize.css" rel="css/normalize.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="css/common-elements-style.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/landing-page.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css" media="screen" title="no title" charset="utf-8">
+    <link href="css/new-story-style.css" rel="stylesheet" media="screen">
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/toggle-popup.js"></script>
+  </head>
+  <body>
+
+    <div class="banner">
+      <div class="wrapper banner-content">
+        <img src="img/story-title.png" alt="img">
+        <div class="banner-pictures">
+          <img id="st-head" src="img/stormtrooper-head.png" alt="img" />
+          <img id="static-img" src="img/static-banner-elements.png" alt="img" />
+        </div>
+      </div>
+    </div>
+    <header id="header">
+      <div id="header-main" class="wrapper">
+        <div id="logo" class="logo">
+          <a href="index.html"><img src="img/logo.png" alt="logo" /></a>
+        </div>
+        <i id="nav-btn" class="fa fa-bars fa-3x"></i>
+        <nav id="nav" >
+          <ul id="menu">
+            <li><a href="index.html">Начало</a></li>
+            <li><a href="#">История</a></li>
+            <li><a href="#">Анкета</a></li>
+            <li><a href="#">За Нас</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+       <div id="story-container" class="wrapper">
+       <h2 id="title" class="threeD">Преди много години, в една далечна галактика...</h2>
+       <section id="story-wrapper">
+         <div class="story-fragment">
+           <div class="img-wrapper">
+             <img src="img/planet.jpg" alt="Planet">
+           </div>
+           <div class="story-text left">
+             Група бунтовници, в капан на далечна планета, са единственото, което брани образованието в ИТ индустрията на Галактиката, от гнева на Държавните вузове.
+           </div>
+         </div>
+         <div class="story-fragment">
+           <div class="img-wrapper">
+             <img src="img/nakov.jpg" alt="Nakov">
+           </div>
+           <div class="story-text right">
+             Уморена от битки, бунтовника Светлин Наков избира грешния момент да потърси мир у дома - в град Велико Търново
+           </div>
+         </div>
+         <div class="story-fragment">
+           <div class="img-wrapper">
+             <img src="img/empire.jpg" alt="Empire">
+           </div>
+           <div class="story-text left">
+             Точно там се събират оцелелите имперски сили и се готвят за сразяваща контраатака. Но не са включили в сметките си него и новите  му съюзници...
+           </div>
+         </div>         
+         <div class="story-fragment">
+           <div class="img-wrapper">
+             <a href="javascript:void(0)" onclick="toggle_visibility('popupBoxOnePosition');">
+               <div class="text-circle">
+                 <h3>Добави парченце история</h3>
+               </div>
+             </a>
+           </div>
+           <i class="shadow"></i>
+         </div>
+       </section>
+       <div id="popupBoxOnePosition">
+			<div class="popupBoxWrapper">
+				<div class="popupBoxContent">
+					<h3>Продължи историята</h3>
+					<p><textarea name="" id="newStoryText" cols="30" rows="10"></textarea></p>					
+					<a id="commit" href="javascript:void(0)" onclick="toggle_visibility('popupBoxOnePosition');">Commit</a>
+					<a id="close" href="javascript:void(0)" onclick="toggle_visibility('popupBoxOnePosition');">Close</a>
+				</div>
+			</div>
+		</div>
+     </div>
+    </main>
+    <footer>
+      <div class="foot-wrap">
+        <div class="foot-logo">
+          <a href="#"><img id="foot-logo" src="img/logo.png" alt="" /></a>
+        </div>
+        <div class="foot-nav">
+          <ul>
+            <li><a href="index.html">Начало</a></li>
+            <li><a href="#">История</a></li>
+            <li><a href="#">Анкета</a></li>
+            <li><a href="#">За Нас</a></li>
+          </ul>
+        </div>
+        <div class="coppyrights">
+          Copyright (c) 2015 Copyright Team "Mandalore" All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+    <script src="js/spinning-background.js" charset="utf-8"></script>
+    <script src="js/web-header.js" charset="utf-8"></script>
+    <script src="js/scroll-effects.js" charset="utf-8"></script>
+  </body>
+</html>
