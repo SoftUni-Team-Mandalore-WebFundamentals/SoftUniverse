@@ -17,4 +17,5 @@ $(document).ready(function() {
   $('#obi').tooltipster({
       content: $('<span><b>Nickname:</b> bojidar.tonchev</span><br><span><b>Име:</b> Bozhidar Tonchev</span><br><span><b>Статус:</b> Учител джадай</span><br><span style="color:silver"><b>Девиз:</b> Нека силата бъде с мен, а вие <Br> си гледайте работата...</span>')
   });
+      $('.tooltip').tooltipster();
 });

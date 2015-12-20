@@ -7,7 +7,6 @@ var xWide;
 var isExpand = false;
 
 jQuery(function () {
-    $('.tooltip').tooltipster();
     $('#nav-btn').click(function () {
         $( "#menu" ).slideToggle("fast");
         var w = window.innerWidth;
