@@ -39,7 +39,7 @@ $(function () {
 
     //robot costs
     var robot = "<i>.  [R2/D2]~:"+"</i> ";
-
+    var you = "<i>.  You~:"+"</i> ";
     //Print Title row on console
     contextOutput.push(1+"<i>.  [R2/D2]~:"+"</i> ");
     contextOutput.push("Type:/help to list all commands");
@@ -52,7 +52,9 @@ $(function () {
             var inputCommand = input.val();
             cmdSpan.text("");
             input.val("");
-
+            contextOutput.push(rowCounter+you+inputCommand);
+            rowCounter++;
+            contextOutput.push("<br>");
             var inpValCommand = inputCommand.split(" ")[0];
             var inpValContent = inputCommand.substring(inpValCommand.length+1,inputCommand.length);
             if (inpValCommand == "/help") {
