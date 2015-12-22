@@ -1,0 +1,92 @@
+.banner{
+  background-color: #353D40;
+}
+.heading{
+    padding-top: 190px;
+    padding-bottom: 0px;
+    text-align: center;
+    width: 100%;
+}
+.banner > .wrapper{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.banner > .wrapper > img{
+    padding-top: 100px;
+}
+main{
+  background-color: white;
+}
+.r2-d2{
+    width: 45%;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+.console{
+    width: 45%;
+    padding-top: 150px;
+}
+.content{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 100%;
+}
+#title-r2{
+    opacity: 0.5;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    font-style: italic;
+    line-height: 2em;
+}
+.console b{
+    font-size: 1.2em;
+}
+.console b::before{
+    content: "\"";
+    font-size: 3em;
+    font-family: serif;
+    color: silver;
+    font-style: italic;
+}
+.r2-console{
+    margin-top: 50px;
+    background-color: #F5F5F5;
+    height: 200px;
+    overflow-y: hidden;
+    border-radius: 10px;
+}
+.r2-console ul{
+    padding-left: 20px;
+    list-style-type: decimal;
+    padding-top: 20px;
+    font-size: 1.2em;
+}
+.cmd{
+    padding: 30px;
+}
+#cmd {
+    font-family: courier;
+    font-size: 14px;
+    background: #F5F5F5;
+    color: black;
+    padding: 5px;
+    overflow: hidden;
+}
+#cmd span {
+    float: left;
+    padding-left: 3px;
+    white-space: pre;
+}
+#cursor {
+    float: left;
+    width: 5px;
+    height: 14px;
+    background: silver;
+}
+input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
