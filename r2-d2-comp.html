@@ -44,13 +44,15 @@
             <div class="console">
                 <b>R2-D2</b><span id="title-r2"> е универсален робор, който изпълнява вашите команди. <br>П.С: Може да се трансформира в барбекю</span>
                 <div class="r2-console">
-                    <div class="cmd">
-                        <div id="cmd">
-                            <span></span>
-                            <div id="cursor"></div>
+                        <div class="r2-console-inner">
+                            <div id="cmd">
+                                <div id="cmd-output">
+                                </div>
+                                <span></span>
+                                <div id="cursor"></div>
+                            </div>
+                            <input type="text" name="command" value="" maxlength="30"/>
                         </div>
-                        <input type="text" name="command" value="" maxlength="20"/>
-                    </div>
                 </div>
             </div>
         </div>

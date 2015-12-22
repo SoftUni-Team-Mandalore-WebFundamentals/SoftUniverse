@@ -72,8 +72,7 @@ main{
     font-size: 14px;
     background: #F5F5F5;
     color: black;
-    padding: 5px;
-    overflow: hidden;
+    padding-left: 20px;
 }
 #cmd span {
     float: left;
@@ -91,4 +90,11 @@ input {
     width: 0;
     height: 0;
     opacity: 0;
+    margin: 20px;
+}
+.r2-console-inner{
+    padding: 20px;
+}
+#cmd-output i{
+    opacity: 0.5;
 }
