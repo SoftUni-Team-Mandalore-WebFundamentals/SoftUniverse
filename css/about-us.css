@@ -1,9 +1,14 @@
 .banner{
   background-color: #353D40;
 }
-.banner > .wrapper > h2{
+.heading{
+    padding-top: 120px;
+    padding-bottom: 30px;
+    text-align: center;
+    width: 100%;
+}
+.banner > .wrapper > .heading > h2{
   margin: 0px;
-  padding-top: 150px;
   color: white;
   font-weight: lighter;
 }
