@@ -1,0 +1,23 @@
+{
+  "name": "softuniverse",
+  "version": "1.0.0",
+  "description": "SoftUni Webteamwork Server App",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SoftUni-Team-Mandalore-WebFundamentals/SoftUniverse.git"
+  },
+  "author": "inspix",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SoftUni-Team-Mandalore-WebFundamentals/SoftUniverse/issues"
+  },
+  "homepage": "https://github.com/SoftUni-Team-Mandalore-WebFundamentals/SoftUniverse#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3"
+  }
+}

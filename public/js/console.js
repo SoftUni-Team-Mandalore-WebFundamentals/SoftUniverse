@@ -34,7 +34,8 @@ $(function () {
     });
     //commands dictionary for users
     var commandDictionary = [];
-    commandDictionary.push("/add-story {content}");
+    commandDictionary.push("/add-story {-language} {content}");
+    commandDictionary.push("-available languages - EN,BG,SH(Shliokavica)");
     commandDictionary.push("/repeat {content}");
 
     //robot costs
@@ -67,10 +68,28 @@ $(function () {
                 contextOutput.push(inpValContent);
                 contextOutput.push("<br>");
             }
-            else if(inpValCommand == "/add-story"){
-                contextOutput.push(rowCounter+robot);
-                contextOutput.push("You added story successful");
-                contextOutput.push("<br>");
+            else if(inpValCommand == "/add-story" &&
+                    (inpValContent.indexOf('-BG') === 0 ||
+                    inpValContent.indexOf('-SH') === 0 ||
+                    inpValContent.indexOf('-EN') === 0))
+              {
+
+                var postData = {'text': inpValContent};
+                $.ajax({
+                   cache: false,
+                   data: postData,
+                   url: window.location.origin +'/api/storyline',
+                   type: 'POST',
+                   success: function (data) {
+                      rowCounter--;
+                      contextOutput.push(rowCounter+robot);
+                      contextOutput.push(data);
+                      contextOutput.push("<br>");
+                      output.innerHTML = contextOutput.join('');
+                      rowCounter++;
+                   }
+               });
+
             }else{
                 contextOutput.push(rowCounter+robot);
                 contextOutput.push("Invalid Command");

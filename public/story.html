@@ -2,23 +2,19 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Webfundamentals TeamWork - Team Mandalore</title>
+    <title>History of Webfundamentals TeamWork - Team Mandalore</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/normalize.css" rel="css/normalize.css">
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="css/common-elements-style.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/landing-page.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css" media="screen" title="no title" charset="utf-8">
-    <link rel="stylesheet" href="css/r2.css" media="screen" title="no title" charset="utf-8">
+    <link href="css/new-story-style.css" rel="stylesheet" media="screen">
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/toggle-popup.js"></script>
   </head>
   <body>
-    <div class="banner">
-      <div class="wrapper">
-        <div class="heading">
-        </div>
-      </div>
-    </div>
     <header id="header">
       <div id="header-main" class="wrapper">
         <div id="logo" class="logo">
@@ -36,26 +32,7 @@
       </div>
     </header>
     <main>
-      <div class="wrapper">
-        <div class="content">
-            <div class="r2-d2">
-                <img src="img/R2D2.png" alt="r2-d2"/>
-            </div>
-            <div class="console">
-                <b>R2-D2</b><span id="title-r2"> е универсален робор, който изпълнява вашите команди. <br>П.С: Може да се трансформира в барбекю</span>
-                <div class="r2-console">
-                        <div class="r2-console-inner">
-                            <div id="cmd">
-                                <div id="cmd-output">
-                                </div>
-                                <span></span>
-                                <div id="cursor"></div>
-                            </div>
-                            <input type="text" name="command" value="" maxlength="30"/>
-                        </div>
-                </div>
-            </div>
-        </div>
+      <div id="wrapper" style="overflow:hidden;">
       </div>
     </main>
     <footer>
@@ -68,7 +45,7 @@
             <li><a href="index.html">Начало</a></li>
             <li><a href="#">История</a></li>
             <li><a href="#">Анкета</a></li>
-            <li><a href="aboutus.html">За Нас</a></li>
+            <li><a href="#">За Нас</a></li>
           </ul>
         </div>
         <div class="coppyrights">
@@ -76,7 +53,13 @@
         </div>
       </div>
     </footer>
+    <script src="js/spinning-background.js" charset="utf-8"></script>
     <script src="js/web-header.js" charset="utf-8"></script>
-    <script src="js/console.js" charset="utf-8"></script>
+    <script src="js/scroll-effects.js" charset="utf-8"></script>
+    <script src="js/webgl/three.min.js"></script>
+    <script src="js/webgl/FontUtils.js"></script>
+    <script src="js/webgl/TextGeometry.js" charset="utf-8"></script>
+    <script src="js/webgl/fonts/dvsb.js"></script>
+    <script src="js/webgl/main.js" charset="utf-8"></script>
   </body>
 </html>

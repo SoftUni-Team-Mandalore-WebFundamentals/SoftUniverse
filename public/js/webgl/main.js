@@ -3,7 +3,7 @@ var meshes = [];
 
 function addMesh(text,y) {
   var geometry = new THREE.TextGeometry( text, {
-    font: 'Star Jedi',
+    font: 'DejaVu Sans',
     size: 45,
     height:20
   });
@@ -30,23 +30,18 @@ function moveMeshes(amountY){
   }
 }
 
-var text = [
-"Lorem ipsum dolor sit amet," ,
-"consectetur adipiscing elit." ,
-"Curabitur ultrices gravida ante," ,
-"sit amet pharetra lacus maximus at." ,
-"Suspendisse potenti." ,
-"Vestibulum placerat at diam sed dignissim." ,
-"Quisque vitae molestie ipsum, vitae viverra lectus." ,
-"Fusce nibh magna," ,
-"blandit vel euismod a," ,
-"faucibus id erat." ,
-"Praesent et interdum ante." ,
-"Nunc cursus, quam eu suscipit auctor," ,
-"metus dolor iaculis lorem," ,
-"in feugiat erat sapien sed lorem."
-]
+var text;
 
+$.ajax({
+   cache: false,
+   url: window.location.origin +'/api/storyline',
+   type: 'GET',
+   success: function (data) {
+     text = data;
+     init();
+     animate();
+   }
+});
 function init() {
   scene = new THREE.Scene();
 
@@ -85,7 +80,7 @@ function init() {
      color: 0xcccccc
   });
   group = new THREE.Object3D();
-  var startingPoint = 500 - text.length * 100;
+  var startingPoint = -1000;
   for (var i = 0; i < text.length; i++) {
     group.add(addMesh(text[i],startingPoint));
     startingPoint -= 100;
@@ -102,6 +97,3 @@ function animate() {
   group.translateY(1.5);
   render();
 }
-
-init();
-animate();
