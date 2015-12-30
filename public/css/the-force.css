@@ -1,26 +1,28 @@
 #nakov-vader {
 margin-top: -30px;
 }
+img {
+	padding: 5%;
+	width: 60%;
+}
 #support-the-troops {
-position: relative;
-margin: 20px;
+	position: relative;
 }
 #best-employee {
-position: relative;
-margin-left: 400px;
-margin-top: -300px;
--ms-transform: rotate(10deg); 
--webkit-transform: rotate(10deg);
-transform: rotate(10deg);
+	position: relative;
+	margin-left: 50%;
+	margin-top: -30%;
+	-ms-transform: rotate(10deg); 
+	-webkit-transform: rotate(10deg);
+	transform: rotate(10deg);
 }
-margin-top: -30px;
-}
+
 h1 {
-text-align: center; 
+	text-align: center; 
 }
 #wrapper {
     max-width: 800px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
     margin: auto;
 }
 .part {
@@ -28,15 +30,59 @@ text-align: center;
 }
 .desc-left {
    text-align: center; 
-   max-width: 400px;
+   max-width: 50%;
    padding: 20px;
 }
 .desc-right {
   position: absolute;
   margin-top: 100px;
   text-align: center; 
-   max-width: 300px;
-   height: 100px;
-   padding: 20px;
-   display: inline;
+  max-width: 40%;
+  padding: 20px;
+  display: inline;
+}
+.list {
+	padding-top: 10px;
+	padding-left: 20px;
+	display: block;
+}
+@media screen and (max-width: 560px) {
+    img {	
+	width: 90%;
+    }
+    .desc-right {
+        position: relative;
+        float: right;
+        text-align: right;
+  		margin-top: 1%;
+  		padding: 20px;
+  		display: block;
+  		max-width: 90%;
+	}
+	.desc-left {
+	    text-align: left;
+	    padding: 0px 20px;;
+	    position: relative;
+   		display: block;
+   		float: left;
+   		max-width: 90%;		
+	}
+	.list {
+		clear: both;
+	}
+
+	#best-employee {
+     	margin-left: 10%;
+		margin-bottom: 3%;
+	}
+}
+@media screen and (max-width: 850px) {
+	#best-employee {
+		position: relative;
+		float: left;
+		margin-left: 30%;
+		margin-bottom: 3%;
+        width: 60%;
+	}
+	
 }
