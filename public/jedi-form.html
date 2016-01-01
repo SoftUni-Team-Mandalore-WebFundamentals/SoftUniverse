@@ -13,18 +13,11 @@
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/toggle-popup.js"></script>
+    <script src="js/jedi-form.js"></script>
+    <link rel="stylesheet" href="css/form-basic.css">
   </head>
   <body>
 
-    <div class="banner">
-      <div class="wrapper banner-content">
-        <img src="img/story-title.png" alt="img">
-        <div class="banner-pictures">
-          <img id="st-head" src="img/stormtrooper-head.png" alt="img" />
-          <img id="static-img" src="img/static-banner-elements.png" alt="img" />
-        </div>
-      </div>
-    </div>
     <header id="header">
       <div id="header-main" class="wrapper">
         <div id="logo" class="logo">
@@ -43,30 +36,109 @@
     </header>
     <main>
 
-      <form id="jedi-form">
+      <div id="form-wrapper">
 
-        What's your greatest achievement <br>
-        <input type="radio" name="achievement" value="killed-jedi" checked> Killed all the Jedi <br>
-        <input type="radio" name="achievement" value="death-star"> Destroyed the Death Star <br>
-        <input type="radio" name="achievement" value="kissed-sister"> Kissed my sister <br>
-        <input type="radio" name="achievement" value="wookie-friend"> Had a Wookie as a best friend <br>
-        <input type="radio" name="achievement" value="anger-rage"> I got really drunk and went to space <br> <br>
+        <form id="jedi-form" class="form-basic">
 
-        How do you gain power? <br>
-        <input type="radio" name="gain-power" value="anger-rage"> Through anger and rage <br>
-        <input type="radio" name="gain-power" value="anger-rage" checked> Through peace and wisdom <br>
-        <input type="radio" name="gain-power" value="passion"> Passion is the key to unlimited power <br>
-        <input type="radio" name="gain-power" value="sofia-disco"> Sofia Discos <br>
+          <h2>The Jedi Quiz</h2>
 
+          <div class="form-row">
+            <h3 class="question">What's your greatest achievement?</h3>
+            <input type="radio" name="achievement" value="killed-jedi" checked> Killed all the Jedi <br>
+            <input type="radio" name="achievement" value="death-star"> Destroyed the Death Star <br>
+            <input type="radio" name="achievement" value="kissed-sister"> Kissed my sister <br>
+            <input type="radio" name="achievement" value="wookie-friend"> Had a Wookie as a best friend <br>
+            <input type="radio" name="achievement" value="drunk"> I got really drunk and went to space <br>
+          </div>
 
+          <div class="form-row">
+            <h3 class="question">How do you gain power?</h3>
+            <input type="radio" name="gain-power" value="anger-rage"> Through anger and rage <br>
+            <input type="radio" name="gain-power" value="anger-rage" checked> Through peace and wisdom <br>
+            <input type="radio" name="gain-power" value="passion"> Passion is the key to unlimited power <br>
+            <input type="radio" name="gain-power" value="sofia-disco"> Sofia Discos <br>
+          </div>
 
+          <div class="form-row">
+            <h3 class="question">What was your childhood like?</h3>
 
+            <input type="radio" name="childhood" value="uncle-aunt"> I lived with my Uncle and Aunt in the desert <br>
+            <input type="radio" name="childhood" value="drinks"> Drank too much rakia with my pals <br>
+            <input type="radio" name="childhood" value="harry"> You're a lizard Harry! <br>
+            <input type="radio" name="childhood" value="wookie"> I was a cute little wookie <br>
+            <input type="radio" name="childhood" value="chosen-one"> I was born the chosen one! <br>
+          </div>
 
-        <!-- shte ima rezultat, ti ne si jedi, a prosto si piqn :D -->
+          <div class="form-row">
+            <h3 class="question">Describe your hobbies</h3>
 
+            <input type="checkbox" name="hobbies" value="death-stars"> Building death stars <br>
+            <input type="checkbox" name="hobbies" value="kill-jedi"> I kill jedi <br>
+            <input type="checkbox" name="hobbies" value="meditation"> Meditation, I do, yes! <br>
+            <input type="checkbox" name="hobbies" value="drink"> Drink till I see death stars <br>
+          </div>
 
-      </form>
+          <div class="form-row">
+            <h3 class="question">What would you choose as a nickname?</h3>
 
+            <input type="radio" name="gain-power" value="darth-nakov"> Darth Nakov <br>
+            <input type="radio" name="gain-power" value="obi-wan" checked> Obi-Wan Nakov <br>
+            <input type="radio" name="gain-power" value="qui-gon-nakov"> Qui-Gon Svetlin <br>
+            <input type="radio" name="gain-power" value="drunk-vader"> Drunk Vader <br>
+          </div>
+
+          <button type="button" onclick="return getResult()">Get Result</button>
+
+        </form>
+      </div>
+
+      <!-- Results-->
+      <div id="result-jedi" class="result">
+
+        <img src="img/jedi.jpg"/>
+
+        <p>Ти си един от легендарните джадаи, спасителите на галактиката. Прекарваш деня си в медитация и размисли.
+          Не ти дреме за нищо, защото знаеш, че дори да те убият, ще се върнеш като холограма по някое време.</p>
+
+        <button type="button" onclick="return closeResult()">X </button>
+
+      </div>
+
+      <div id="result-sith" class="result">
+
+        <img src="img/sith.jpg"/>
+
+        <p>
+          Ти владееш перфектно тъмната страна на силата, знаеш как да използваш емоциите си, да гледаш лошо и да говориш с
+          по-дебел глас. Всички ги е страх от теб, защото си те представят как избиваш всичките падауани или бившия си учител. Страшна работа!
+        </p>
+
+        <button type="button" onclick="return closeResult()">X</button>
+      </div>
+
+      <div id="result-rebel" class="result">
+
+        <img src="img/rebel.jpg"/>
+
+        <p>
+          Ти си бунтовник по природа, обичаш да правиш далавери и да обикаляш из галаткиката. След тежкия ден сядаш да
+          разпуснеш с твоя най-добър приятел, който всъщност е Ууки. В края на краищата печелиш принцесата, така че няма проблем.
+        </p>
+
+        <button type="button" onclick="return closeResult()">X</button>
+      </div>
+
+      <div id="result-drunk" class="result">
+
+        <img src="img/drunk-jedi.jpg"/>
+
+        <p>
+          Когато удариш 3 ракии ставаш най-големият джадай, повелителят на галатиката. Започваш да превземаш звезди на смъртта,
+          да трепеш зли ситски лордове и винаги успяваш да въведеш мир в галактиката и празнота в чашата си. Наздраве!
+        </p>
+
+        <button type="button" onclick="return closeResult()">X</button>
+      </div>
     </main>
     <footer>
       <div class="foot-wrap">
