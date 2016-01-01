@@ -91,7 +91,11 @@
     position: absolute;
     top: 0px;
     right: 0px;
-    height: 22px;
-    width: 21px;
-
+    height: 21px;
+    width: 19px;
+    border-radius: 90px;
+    background-color: black;
+    color: white;
+    padding-right: 14px;
+    padding-bottom: 19px;
 }
