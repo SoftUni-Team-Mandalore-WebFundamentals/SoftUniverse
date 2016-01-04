@@ -14,19 +14,23 @@ router.get('/storyline',function(req,res,next){
 router.post('/storyline',function(req,res,next){
   var token = req.body.text.substring(0,3);
   var string = req.body.text.substring(token.length);
-  /*
-  var language;
+  var result = false;
   switch(token){
     case '-EN':
+      result = stringUtils.validateStringEN(string.trim());
       break;
     case '-BG':
-      stringUtils.validateStringBG(string.trim());
+      result = stringUtils.validateStringBG(string.trim());
       break;
     case '-SH':
-      language = 2;
-      break;
-  }*/
+      res.send('Are you crazy, we don\'t tolerate shliokavica in our universe!');
+      return;
+  }
 
+  if (!result) {
+    res.send('Error, your text must be invalid..Try again!');
+    return;
+  }
   fs.appendFile('private/storyline.txt', string + '\r\n', 'utf8', function(err){
       if (err) res.send('Error while adding story...');
       else res.send('Story succesfully added');

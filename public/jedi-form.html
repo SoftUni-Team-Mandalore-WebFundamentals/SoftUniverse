@@ -44,47 +44,48 @@
 
           <div class="form-row">
             <h3 class="question">What's your greatest achievement?</h3>
-            <input type="radio" name="achievement" value="killed-jedi" checked> Killed all the Jedi <br>
-            <input type="radio" name="achievement" value="death-star"> Destroyed the Death Star <br>
-            <input type="radio" name="achievement" value="kissed-sister"> Kissed my sister <br>
-            <input type="radio" name="achievement" value="wookie-friend"> Had a Wookie as a best friend <br>
-            <input type="radio" name="achievement" value="drunk"> I got really drunk and went to space <br>
+            <input type="radio" name="achievement" value=1 checked> Killed all the Jedi <br>
+            <input type="radio" name="achievement" value=4> Destroyed the Death Star <br>
+            <input type="radio" name="achievement" value=3> Kissed my sister <br>
+            <input type="radio" name="achievement" value=2> Had a Wookie as a best friend <br>
+            <input type="radio" name="achievement" value=0> I got really drunk and went to space <br>
           </div>
 
           <div class="form-row">
             <h3 class="question">How do you gain power?</h3>
-            <input type="radio" name="gain-power" value="anger-rage"> Through anger and rage <br>
-            <input type="radio" name="gain-power" value="anger-rage" checked> Through peace and wisdom <br>
-            <input type="radio" name="gain-power" value="passion"> Passion is the key to unlimited power <br>
-            <input type="radio" name="gain-power" value="sofia-disco"> Sofia Discos <br>
+            <input type="radio" name="gain-power" value=1 checked> Through anger and rage <br>
+            <input type="radio" name="gain-power" value=3> Through peace and wisdom <br>
+            <input type="radio" name="gain-power" value=2> Passion is the key to unlimited power <br>
+            <input type="radio" name="gain-power" value=0> Sofia Discos <br>
           </div>
 
           <div class="form-row">
             <h3 class="question">What was your childhood like?</h3>
 
-            <input type="radio" name="childhood" value="uncle-aunt"> I lived with my Uncle and Aunt in the desert <br>
-            <input type="radio" name="childhood" value="drinks"> Drank too much rakia with my pals <br>
-            <input type="radio" name="childhood" value="harry"> You're a lizard Harry! <br>
-            <input type="radio" name="childhood" value="wookie"> I was a cute little wookie <br>
-            <input type="radio" name="childhood" value="chosen-one"> I was born the chosen one! <br>
+            <input type="radio" name="childhood" value=3 checked> I lived with my Uncle and Aunt in the desert <br>
+            <input type="radio" name="childhood" value=0> Drank too much rakia with my pals <br>
+            <input type="radio" name="childhood" value=4> You're a lizard Harry! <br>
+            <input type="radio" name="childhood" value=2> I was a cute little wookie <br>
+            <input type="radio" name="childhood" value=1> I was born the chosen one! <br>
           </div>
 
           <div class="form-row">
             <h3 class="question">Describe your hobbies</h3>
 
-            <input type="checkbox" name="hobbies" value="death-stars"> Building death stars <br>
-            <input type="checkbox" name="hobbies" value="kill-jedi"> I kill jedi <br>
-            <input type="checkbox" name="hobbies" value="meditation"> Meditation, I do, yes! <br>
-            <input type="checkbox" name="hobbies" value="drink"> Drink till I see death stars <br>
+            <input type="radio" name="hobbies" value=2 checked> Destroying death stars <br>
+            <input type="radio" name="hobbies" value=1> I kill jedi <br>
+            <input type="radio" name="hobbies" value=3> Meditation, I do, yes! <br>
+            <input type="radio" name="hobbies" value=0> Drink till I see death stars <br>
           </div>
 
           <div class="form-row">
             <h3 class="question">What would you choose as a nickname?</h3>
 
-            <input type="radio" name="gain-power" value="darth-nakov"> Darth Nakov <br>
-            <input type="radio" name="gain-power" value="obi-wan" checked> Obi-Wan Nakov <br>
-            <input type="radio" name="gain-power" value="qui-gon-nakov"> Qui-Gon Svetlin <br>
-            <input type="radio" name="gain-power" value="drunk-vader"> Drunk Vader <br>
+            <input type="radio" name="choose-nickname" value=1 checked> Darth Nakov <br>
+            <input type="radio" name="choose-nickname" value=2> Obi-Wan Nakov <br>
+            <input type="radio" name="choose-nickname" value=3> Svetlin Skywalker <br>
+            <input type="radio" name="choose-nickname" value=0> Drunk Vader <br>
+            <input type="radio" name="choose-nickname" value=4> Yoda Nakov <br>
           </div>
 
           <button type="button" onclick="return getResult()">Get Result</button>
@@ -138,7 +139,21 @@
         </p>
 
         <button type="button" onclick="return closeResult()">X</button>
+       </div>
+       
+       <div id="result-luke" class="result">
+
+        <img src="img/luke-poster.jpg"/>
+
+        <p>
+          Ти си обикновенно селско момче. Отишел си в големия град за да постигнеш нещо. Внимавай! 
+          Някои момичета покрай теб могат да се окажат твоите сестри. Но в крайна сметка ти имаш шанс да спасиш 
+          Галактиката, така че не се притеснявай.        
+        </p>
+
+        <button type="button" onclick="return closeResult()">X</button>
       </div>
+      
     </main>
     <footer>
       <div class="foot-wrap">

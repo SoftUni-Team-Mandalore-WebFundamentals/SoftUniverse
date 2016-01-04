@@ -98,6 +98,8 @@ $(function () {
             output.innerHTML = contextOutput.join('');
             rowCounter++;
         }
+        input.blur();
+        input.focus();
     });
 
     //Cursor

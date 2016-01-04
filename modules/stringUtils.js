@@ -1,5 +1,7 @@
 var fs = require('fs');
 
+var allowedChars = ' ,.!?()[]/\\-=@#$%^&*_+|><"\'';
+
 var allowedBG = [
   'а','б','в','г','д','е',
   'ж','з','и','й','к','л',
@@ -8,22 +10,30 @@ var allowedBG = [
   'ш','щ','ь','ъ','ю','я'
 ];
 
-var shliokavica = [
-  'a','b','v','g','d','e',
-  'j','z','i','y','k','l',
-  'm','n','o','p','r','s',
-  't','u','f','h','c','ch',
-  'sh','sht','y','y','iu','ia'
-]
+var allowedEN = 'abcdefghijklmnopqrstuvwxyz';
 
-var allowedEN = 'abcdefghijklmnopqrstuvwzyz';
-
+function isInArray(array,str){
+  var length = array.length;
+  for (var i = 0; i < length; i++) {
+    if (array[i] === str) {
+      return true;
+    }
+  }
+  return false;
+}
 
 function validateStringBG(string){
   if (typeof string != 'string') {
     return false;
   }
-  // TODO: need some validation
+  for (var i = 0; i < string.length; i++) {
+    console.log(string[i].toLowerCase());
+    if (isInArray(allowedBG,string[i].toLowerCase())  || allowedChars.indexOf(string[i]) !== -1) {
+      continue;
+    }else {
+      return false;
+    }
+  }
   return true;
 }
 
@@ -31,15 +41,14 @@ function validateStringEN(string){
   if (typeof string != 'string') {
     return false;
   }
-  // TODO: need some validation
-  return true;
-}
-
-function validateStringSH(string){
-  if (typeof string != 'string') {
-    return false;
+  for (var i = 0; i < string.length; i++) {
+    console.log(string[i].toLowerCase());
+    if (allowedEN.indexOf(string[i].toLowerCase()) !== -1  || allowedChars.indexOf(string[i]) !== -1) {
+      continue;
+    }else {
+        return false;
+    }
   }
-  // TODO: need some validation and translation to BG
   return true;
 }
 
@@ -76,3 +85,4 @@ function readFile(path){
 
 module.exports.readFileToStringArray = readFileToStringArray;
 module.exports.validateStringBG = validateStringBG;
+module.exports.validateStringEN = validateStringEN;
