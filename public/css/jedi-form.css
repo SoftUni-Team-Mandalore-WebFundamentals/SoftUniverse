@@ -9,6 +9,10 @@
     margin-bottom: 50px;
 }
 
+header {
+    background-color: black;
+}
+
 .form-row {
     margin-bottom: 20px;
     font-size: 20px;
@@ -32,10 +36,6 @@
 }
 
 #result-drunk {
-    display: none;
-}
-
-#result-luke {
     display: none;
 }
 
@@ -69,6 +69,7 @@
     margin-bottom: 10px;
 }
 
+/*pop-up result queries*/
 @media only screen and (max-width: 600px) and (max-height: 550px) {
     .result p {
         font-size: 15px;
@@ -103,3 +104,14 @@
     padding-right: 14px;
     padding-bottom: 19px;
 }
+
+.choice {
+    display: block;
+}
+
+.choice input {
+    display: inline-block;
+    margin-top: 0px !important;
+    margin-bottom: 2px !important;
+}
+
