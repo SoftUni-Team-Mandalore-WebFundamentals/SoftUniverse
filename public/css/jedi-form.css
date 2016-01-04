@@ -39,6 +39,10 @@ header {
     display: none;
 }
 
+#result-luke {
+    display: none;
+}
+
 .result {
     display: inline;
     margin:auto;
