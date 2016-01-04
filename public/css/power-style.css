@@ -1,0 +1,30 @@
+#animationFrames img {
+    display: none;
+}
+
+body{
+	text-align: center;	
+}
+
+#content{
+	margin: 20px;
+}
+
+img{
+	position: relative;
+	width: 500px;
+	display: inline-block;
+	
+}
+button{
+	width: 200px;
+	height: 50px;
+	margin: 50px;
+}
+
+.score{
+	margin: 30px;
+	font-size: 2em;
+
+}
+
