@@ -71,7 +71,8 @@ $(function () {
             else if(inpValCommand == "/add-story" &&
                     (inpValContent.indexOf('-BG') === 0 ||
                     inpValContent.indexOf('-SH') === 0 ||
-                    inpValContent.indexOf('-EN') === 0))
+                    inpValContent.indexOf('-EN') === 0 ||
+                    inpValContent.indexOf('-D!') === 0))
               {
 
                 var postData = {'text': inpValContent};

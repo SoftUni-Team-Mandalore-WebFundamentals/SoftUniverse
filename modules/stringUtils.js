@@ -42,7 +42,6 @@ function validateStringEN(string){
     return false;
   }
   for (var i = 0; i < string.length; i++) {
-    console.log(string[i].toLowerCase());
     if (allowedEN.indexOf(string[i].toLowerCase()) !== -1  || allowedChars.indexOf(string[i]) !== -1) {
       continue;
     }else {

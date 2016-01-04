@@ -11,7 +11,10 @@ router.get('/storyline',function(req,res,next){
   res.json(stringUtils.readFileToStringArray('private/storyline.txt'));
 });
 
+var lastRequest;
+
 router.post('/storyline',function(req,res,next){
+  var message;
   var token = req.body.text.substring(0,3);
   var string = req.body.text.substring(token.length);
   var result = false;
@@ -23,12 +26,29 @@ router.post('/storyline',function(req,res,next){
       result = stringUtils.validateStringBG(string.trim());
       break;
     case '-SH':
-      res.send('Are you crazy, we don\'t tolerate shliokavica in our universe!');
-      return;
+      message = 'Are you crazy, we don\'t tolerate shliokavica in our universe!';
+      break;
+    case '-D!':
+      if(lastRequest == undefined){
+        lastRequest = '-D!';
+        message = 'Please enter password to delete the story.<br>/add-story -D! {password}';
+      }
+      else {
+        lastRequest = undefined;
+        if (string.trim() == 'wookee') {
+          fs.truncate('private/storyline.txt',0, function(err){
+            if(err) console.log(err);
+          });
+          message = 'Story deleted succesfully';
+        }else {
+          message ='Invalid password!';
+        }
+      }
+      break;
   }
 
   if (!result) {
-    res.send('Error, your text must be invalid..Try again!');
+    res.send(message || 'Error, your text must be invalid..Try again!');
     return;
   }
   fs.appendFile('private/storyline.txt', string + '\r\n', 'utf8', function(err){

@@ -30,6 +30,17 @@ function moveMeshes(amountY){
   }
 }
 
+
+function addTextToScene(){
+  group = new THREE.Object3D();
+  var startingPoint = -1000;
+  for (var i = 0; i < text.length; i++) {
+    group.add(addMesh(text[i],startingPoint));
+    startingPoint -= 100;
+  }
+  scene.add(group);
+}
+
 var text;
 
 $.ajax({
@@ -38,7 +49,7 @@ $.ajax({
    type: 'GET',
    success: function (data) {
      text = data;
-     init();
+     addTextToScene();   
      animate();
    }
 });
@@ -48,9 +59,7 @@ function init() {
   var vWidth = $(window).width();
   var vHeight = $(window).height();
 
-  var ar = vWidth / vHeight;
-
-  camera = new THREE.PerspectiveCamera( 65, ar, 0.1, 10000);
+  camera = new THREE.PerspectiveCamera( 65, 16.0/9.0, 0.1, 10000);
   scene.add(camera);
   camera.position.set(0,-700,700);
   camera.lookAt(scene.position);
@@ -60,33 +69,28 @@ function init() {
     var nW = $(window).width();
     var nH = $(window).height();
     renderer.setSize(nW,nH);
-    camera.aspect = nW/nH;
   });
   container = document.getElementById( 'wrapper' );
   container.appendChild( renderer.domElement );
 
-  spotLight = new THREE.SpotLight( 0xffffff );
+  spotLight = new THREE.SpotLight( 0xdabd2e );
   spotLight.position.set( 0, 0, 1000 );
-  spotLight.castShadow = true;
-  spotLight.shadowMapWidth = 200;
-  spotLight.shadowMapHeight = 200;
-  spotLight.shadowCameraNear = 250;
-  spotLight.shadowCameraFar = 1500;
-  spotLight.shadowCameraFov = 45;
+  // More lightweight lighting calculations / less cool effect
+  // spotLight.castShadow = false;
+  // spotLight.shadowMapWidth = 200;
+  // spotLight.shadowMapHeight = 200;
+  // spotLight.shadowCameraNear = 250;
+  // spotLight.shadowCameraFar = 1500;
+  // spotLight.shadowCameraFov = 45;
   scene.add( spotLight );
 
 
   material = new THREE.MeshPhongMaterial({
-     color: 0xcccccc
+     color: 0xffffff
   });
-  group = new THREE.Object3D();
-  var startingPoint = -1000;
-  for (var i = 0; i < text.length; i++) {
-    group.add(addMesh(text[i],startingPoint));
-    startingPoint -= 100;
-  }
-  scene.add(group);
 }
+
+
 
 function render() {
     renderer.render( scene, camera );
@@ -97,3 +101,6 @@ function animate() {
   group.translateY(1.5);
   render();
 }
+
+
+init();
