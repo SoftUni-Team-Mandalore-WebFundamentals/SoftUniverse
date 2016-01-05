@@ -27,7 +27,7 @@
   transition: width 0.5s;
 }
 nav{
-  width: 70%;
+  width: 65%;
   text-align: right;
 }
 nav > ul{
@@ -93,7 +93,7 @@ nav > ul > li > a:hover{
     width: 100%;
   }
 }
-@media screen and (min-width: 1079px){
+@media screen and (min-width: 1081px){
   #nav-btn{
     display: none;
   }
