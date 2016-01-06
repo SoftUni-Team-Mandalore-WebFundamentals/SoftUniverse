@@ -14,6 +14,11 @@ router.get('/storyline',function(req,res,next){
 var lastRequest;
 
 router.post('/storyline',function(req,res,next){
+  if (req.body.text.length > 42) {
+      res.send("Don't try to break me, get off my universe.");
+      return;
+  }
+
   var message;
   var token = req.body.text.substring(0,3);
   var string = req.body.text.substring(token.length);
