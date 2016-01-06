@@ -35,7 +35,7 @@ router.post('/storyline',function(req,res,next){
       }
       else {
         lastRequest = undefined;
-        if (string.trim() == 'wookee') {
+        if (string.trim() == 'laluger') {
           fs.truncate('private/storyline.txt',0, function(err){
             if(err) console.log(err);
           });
