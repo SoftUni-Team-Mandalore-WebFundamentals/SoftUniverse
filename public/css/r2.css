@@ -98,3 +98,22 @@ input {
 #cmd-output i{
     opacity: 0.5;
 }
+
+
+@media screen and (max-width: 760px){
+  .r2-d2{
+      width: 50%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin: 0 auto;
+  }
+  .console{
+      width: 80%;
+      padding-top: 20px;
+      padding-bottom: 50px;
+      margin: 0 auto;
+  }
+  .content{
+      flex-flow: column;
+  }
+}
