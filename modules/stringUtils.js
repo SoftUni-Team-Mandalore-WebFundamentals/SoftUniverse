@@ -51,15 +51,24 @@ function validateStringEN(string){
   return true;
 }
 
+var startingLines = [
+  "A long time ago",
+  "in a galaxy far, far away...",
+  "",
+  ""
+];
+
 function readFileToStringArray(path){
   var fileContents = readFile(path);
   var result = [];
+  for (var i = 0; i < startingLines.length; i++) {
+    result.push(startingLines[i]);
+  }
   if (fileContents == null) {
     return result;
   }
 
   var lines = fileContents.split('\r\n');
-  var result = [];
   for (var i = 0; i < lines.length; i++) {
     if (lines[i].length > 0) {
       result.push(lines[i]);
