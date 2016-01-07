@@ -1,6 +1,8 @@
 # Team-Mandalore
 SoftUni Web Fundamentals Teamwork project
 
+Website: [SoftUniverse](http://softuniverse-mandalore.rhcloud.com/index.html)
+
 ### Server setup:
 
 1. Install latest [Node.js](https://www.nodejs.org "Node.js Homepage") . Make sure you check 'npm' and 'add to path' options.
