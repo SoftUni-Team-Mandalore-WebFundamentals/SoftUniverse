@@ -55,7 +55,20 @@ var startingLines = [
   "A long time ago",
   "in a galaxy far, far away...",
   "",
-  ""
+  "",
+  " GOSHO",
+  " Jedi",
+  " posle loshiq umrq",
+  " Nakov got drunk",
+  " я па ти",
+  " Здравко защо няма манджа!",
+  " Imalo edno vreme edin chovek",
+  " koito ne si beshe napravil saita",
+  " kakto trqbva i horata vlizaha",
+  " i go chupeha mnogo jestoko",
+  " shtoto ",
+  " sa uchili v softuni i sa mnogo",
+  " inteligentni WE"
 ];
 
 function readFileToStringArray(path){
