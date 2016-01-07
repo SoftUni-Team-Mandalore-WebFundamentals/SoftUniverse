@@ -1,4 +1,5 @@
 var container, scene, camera, renderer, controls, material, spotLight, group;
+var startingPoint, text, currentIndex;
 var meshes = [];
 
 function addMesh(text,y) {
@@ -7,16 +8,13 @@ function addMesh(text,y) {
     size: 45,
     height:20
   });
-
   geometry.computeBoundingBox();
   var width = geometry.boundingBox.max.x - geometry.boundingBox.min.x;
-
   var mesh = new THREE.Mesh( geometry, material );
   mesh.position.set( -0.5 * width, y, 0 );
-  return mesh;
-  // scene.add(mesh);
-  // meshes.push(mesh);
+  meshes.push(mesh);
 }
+
 
 function moveMeshes(amountY){
   for (var i = 0; i < meshes.length; i++) {
@@ -25,23 +23,45 @@ function moveMeshes(amountY){
     if (element.position.y > 1000) {
       scene.remove(element);
       meshes.splice(i,1);
-      i--;
+      if (currentIndex < meshes.length) {
+        var mesh = meshes[currentIndex];
+        mesh.position.y += offset;
+        offset -= 100;
+        scene.add(mesh);
+      }
     }
   }
 }
 
 
-function addTextToScene(){
-  group = new THREE.Object3D();
-  var startingPoint = -1000;
+// function addTextToScene(){
+//   group = new THREE.Object3D();
+//   var startingPoint = -1000;
+//   for (var i = 0; i < text.length; i++) {
+//     group.add(addMesh(text[i],startingPoint));
+//     startingPoint -= 100;
+//   }
+//   scene.add(group);
+// }
+
+function loadMeshes(){
+  startingPoint = -1000;
   for (var i = 0; i < text.length; i++) {
-    group.add(addMesh(text[i],startingPoint));
+    addMesh(text[i],startingPoint);
     startingPoint -= 100;
   }
-  scene.add(group);
 }
 
-var text;
+var offset = 0;
+
+function addTextToScene(){
+  currentIndex = 20 > text.length ? text.length : 20;
+  for (var i = 0; i < currentIndex; i++) {
+    var mesh = meshes[i];
+    offset -= 100;
+    scene.add(mesh);
+  }
+}
 
 $.ajax({
    cache: false,
@@ -49,7 +69,8 @@ $.ajax({
    type: 'GET',
    success: function (data) {
      text = data;
-     addTextToScene();   
+     loadMeshes();
+     addTextToScene();
      animate();
    }
 });
@@ -98,7 +119,9 @@ function render() {
 
 function animate() {
   window.requestAnimationFrame( animate );
-  group.translateY(1.5);
+  //group.translateY(1.5);
+  moveMeshes(1.5);
+  offset += 1.5;
   render();
 }
 
